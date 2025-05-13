@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tiingo Stock Search</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	</head>
+  
+  <body class="index-body">
+    <div class="graybox">
+      <h1>Stock Search</h1>
+      
+      <form class="input-form">
+        <div class="input-row">
+          <label for="ticker" class="ticker-label">
+            Enter Stock Ticker Symbol <span class="required">*</span>
+          </label>
+          <input type="text" id="ticker" name="ticker" class="ticker-input" required>
+        </div>
+
+        <div class="button-row">
+          <button type="submit" class="action-button">Search</button>
+          <button type="button" id="clear-btn" class="action-button">Clear</button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="grayline"></div>
+  </body>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
